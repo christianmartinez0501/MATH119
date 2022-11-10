@@ -1,0 +1,75 @@
+---
+title: "Project01Task04"
+execute: 
+  keep-md: True
+format: 
+  html: 
+    code-fold: true
+    code-line-numbers: true
+editor: visual
+---
+
+## Introduction
+
+We are using the different functions to fit our models of the light bulb dataset and we are going to find where our model will be at 80% of the initial intensity.
+
+```{r}
+library(data4led)
+library(ggplot2)
+library(tidyverse)
+bulb <- led_bulb(1,seed = 5372)
+x <- seq(-10,80000,2)
+t <- bulb$hours
+y1 <- bulb$percent_intensity
+```
+
+\## Function 0
+
+As we can see from the figure below, f(t) = 100 with t\>= 0 we set the t = 0 to make sure that the light bulbs intensity is at 100% when turned on. The horizontal line represents the bulb at 100% intensity. We can see that our model will never hit 80% intensity.
+
+```{r}
+f0 <- function(t,a0=0){ a0 + t*0 }
+y0 <- f0(x,a0=100)
+uniroot(f0,c(0,80))$root
+par(mfrow=c(1,2),mar=c(2,2,3,0.25),oma=rep(0.5,4))
+plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16,main='f0', ylim = c(99.5, 102))
+lines(x,y0,col=2)
+plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16, xlim = c(-10,80000),ylim = c(-10,120))
+lines(x,y0,col=2)
+```
+
+\## Function 1
+
+The function below shows the plot where f(t)=100 with t \>= 0. We can see that the parameter is at a0 = 100 and it increases over time with a1 = 0.00011. We can see that this function will also never reach 80% intensity because the model will never go back down from the initial intensity.
+
+```{r}
+f1 <- function(t,a0=0,a1=0){ a0 + a1*t }
+y11 <- f1(x,a0=80,a1=0.00011)
+
+uniroot(f1, c(0,80 ))$root
+
+par(mfrow=c(1,2),mar=c(2,2,3,0.25),oma=rep(0.5,4))
+plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16,main='f1', ylim = c(99.5, 102))
+lines(x,y11,col=2)
+plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16, xlim = c(-10,80000),ylim = c(-10,120))
+lines(x,y11,col=2)
+```
+
+\## Function 2
+
+With the function below we see that a0 = 100, a1 = .0055, a2 = -0.000005. This function matches the graph very poorly because it increases at a short time and drops fast within a short time which does not match our points.
+
+```{r}
+f2 <- function(t,a0=100,a1=0.0009,a2=-0.00000017){ a0 + a1*t + a2*t^2 }
+y2 = f2(x,a0=100,a1=0.0009,a2=-0.00000017)
+
+my_root <- uniroot(f2, c(1,80000))$root
+par(mfrow=c(1,2),mar=c(2,2,3,0.25),oma=rep(0.5,4))
+plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16,main='f2', ylim = c(99.5, 102))
+lines(x,y2,col=2)
+plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16, xlim = c(-10,80000),ylim = c(-10,120))
+lines(x,y2,col=2)
+abline(h=80,col = "gray")
+abline(v=my_root,col = "gray")
+points(my_root,80, col = "red")
+```

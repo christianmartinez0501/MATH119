@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Project02Task02</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="task02_files/libs/clipboard/clipboard.min.js"></script>
+<script src="task02_files/libs/quarto-html/quarto.js"></script>
+<script src="task02_files/libs/quarto-html/popper.min.js"></script>
+<script src="task02_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="task02_files/libs/quarto-html/anchor.min.js"></script>
+<link href="task02_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="task02_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="task02_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="task02_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="task02_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project02Task02</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this task, we are wanting to find the partial derivatives of a loglikelihood function for errors. We will being using f_1,f_4, and f_5 loglikelihood function that we obtained in task 1.</p>
+<section id="function-1" class="level3">
+<h3 class="anchored" data-anchor-id="function-1">Function 1</h3>
+<p>I will show how to get the first and second derivatives of ℓ1(a1;t,y), the loglikelihood function for errors from the general model f1, with respect to a1 are as follows.</p>
+<section id="derivative" class="level4">
+<h4 class="anchored" data-anchor-id="derivative">Derivative</h4>
+<p>As we look at the picture below, we first start by using the sum/difference rule this will then lead us to use the constant multiple rule to put the -1/2 in front. We will then use the power rule and then the chain rule to lead us to the next part. We will then simplify. Move on to distributing the t_i. We then break it into sums using the sum properties rule. Then we will finish by pulling the constants from the sum as seen below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./L1function.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">function1</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="second-derivative" class="level4">
+<h4 class="anchored" data-anchor-id="second-derivative">Second Derivative</h4>
+<p>In the picture below, we take the second derivative with respect to a_1. <img src="./L1respec.jpeg" class="img-fluid" alt="function1"></p>
+</section>
+</section>
+<section id="function-4" class="level3">
+<h3 class="anchored" data-anchor-id="function-4">Function 4</h3>
+<p>I will show how to get the first and second derivatives of ℓ4(a1,a2;t,y), the loglikelihood function for errors from the general model f4, with respect to a1 and a2 are as follows. #### Derivative a1 As we look at the picture below, we first start by using the sum/difference rule this will then lead us to use the constant multiple rule to put the -1/2 in front. We will then use the power rule and then the chain rule to lead us to the next part. We will then simplify. Move on to distributing the t_i. We then break it into sums using the sum properties rule. Then we will finish by pulling the constants from the sum as seen below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./l4a1.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">function4</figcaption><p></p>
+</figure>
+</div>
+<section id="derivative-a2" class="level4">
+<h4 class="anchored" data-anchor-id="derivative-a2">Derivative a2</h4>
+<p>As we look at the picture below, we first start by using the sum/difference rule this will then lead us to use the constant multiple rule to put the -1/2 in front. We will then use the power rule and then the chain rule to lead us to the next part. We will then simplify. Move on to distributing the ln. We then break it into sums using the sum properties rule. Then we will finish by pulling the constants from the sum as seen below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./L4a2.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">function4</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="second-derivative-a1-and-a2" class="level4">
+<h4 class="anchored" data-anchor-id="second-derivative-a1-and-a2">Second Derivative a1 and a2</h4>
+<p>In the picture below, we take the second derivative with respect to a_1, a_2.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./L4a11a22.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">function4</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="function-5" class="level3">
+<h3 class="anchored" data-anchor-id="function-5">Function 5</h3>
+<p>I will show how to get the first and second derivatives of ℓ5(a1;t,y), the loglikelihood function for errors from the general model f5, with respect to a1 are as follows. #### Derivative As we look at the picture below, we first start by using the sum/difference rule this will then lead us to use the constant multiple rule to put the -1/2 in front. We will then use the power rule and then the chain rule to lead us to the next part. We will then simplify. Move on to distributing the t_ie. We then break it into sums using the sum properties rule. Then we will finish by pulling the constants from the sum as seen below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./l5a1.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">function5</figcaption><p></p>
+</figure>
+</div>
+<section id="second-derivative-a1" class="level4">
+<h4 class="anchored" data-anchor-id="second-derivative-a1">Second Derivative a1</h4>
+<p>In the picture below, we take the second derivative with respect to a_1.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./l5a12.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">function5</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>By using the loglikelihood functions from task 1, we were able to find the partial derivatives of these functions.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
